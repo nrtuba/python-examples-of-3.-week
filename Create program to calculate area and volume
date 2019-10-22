@@ -1,0 +1,68 @@
+"""
+    Geometrik şekillerin alanve hacimlerini  hesaplama
+"""
+
+
+"""  
+1-Hacim hesapla
+2-Alan hesapla 
+3-Cikis icin 0 giriniz"""
+while True:
+ islem=int(input("lutfen bir islem numarasi seciniz, cikmak icin 0 giriniz:"))
+
+ if islem==1:
+        print("islem yapmak istediginiz sekli giriniz\n"
+        "kup=kp,\nkure=kr,\nkoni=kn")
+
+        hacim_islem=(input("lutfen bir sekil seciniz"))
+
+        if hacim_islem=="kp":
+            a=int(input("lutfen kupun bir kenarini giriniz"))
+            kp_hacim=(a**3)
+            print("kupun hacmi:",kp_hacim)
+            continue
+
+        elif hacim_islem=="kr":
+            r = int(input("r yaricapini giriniz"))
+            pi = 3.1415
+            kr_hacim=((4/3)*(r**3)*pi)
+            print("kurenin hacimi:",kr_hacim)
+
+        elif hacim_islem=="kn":
+            r=int(input("koninin yaricapini giriniz:"))
+            h=int(input("koninin yuksekligini giriniz:"))
+            pi = 3.1415
+            kn_hacim=(((r**2)*h*pi)/3)
+            print("koninin hacmi:",kn_hacim)
+
+        else:
+            print("lutfen seklinizi koni,kure veya kup olarak seciniz")
+
+ elif islem==2:
+        print("alanini hesaplamak istedginiz sekil:\n"
+              "dikdortgen_alan=ddortgen,\nucgen_alan=ucgen,\nkare_alan=kare")
+        alan_islem=input("\nlutfen bir sekil seciniz")
+
+        if alan_islem=="ddortgen":
+            a=int(input("lutfen uzun kenari giriniz"))
+            b=int(input("lutfen kisa kenari giriniz"))
+            dd_alan=a*b
+            print("dikdortgenin alani:",dd_alan)
+
+        elif alan_islem=="ucgen":
+            taban=int(input("ucgenin taban degerini giriniz:"))
+            h=int(input("ucgenin yuksekligini giriniz:"))
+            uc_alan=((taban*h)/2)
+            print("ucgenin alani:",uc_alan)
+
+        elif alan_islem=="kare":
+            a=int(input("karenin bir kenarini giriniz"))
+            kr_alan=(a**2)
+            print("karenin alani:",kr_alan)
+
+        else:
+            print("lutfen sekli dd_alan,uc_alan,kr_alan olarak seciniz")
+
+ else:
+     print("cikis yapiliyor")
+     break
