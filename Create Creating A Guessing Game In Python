@@ -1,0 +1,52 @@
+giriş = """
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+|                                                               |
+|              S A Y I  T A H M İ N  O Y U N U N A              |
+|                    H O Ş  G E L D İ N İ Z                     |
+|                                                               |
+|                                                               
+|_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _|
+"""
+çıkış = """
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+|                                                               |
+|              S A Y I  T A H M İ N  O Y U N U N U              |
+|                O Y N A D I Ğ I N I Z  İ Ç İ N                 |
+|                 T E Ş E K K Ü R  E D E R İ Z                  |
+|                                                     
+|_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _|
+"""
+print(giriş)
+#kullanicidan 1den 100e kadar sayi tahmini bulunmasini isteyelim.sayi araligini randomdan rastgele secilmesini istedik.
+#deneme sayisini artirarak devam ettirelim.
+
+
+
+import random
+tahminisayi=random.randint(1,100)
+deneme_sayisi=0
+
+while True:
+    tutulansayi = int(input("lutfen 1den 100e kadar bir sayi tahmini girin: (cikis=0:)"))
+
+    if tutulansayi == 0:
+        print("cikis yapiliyor")
+        break
+    elif tutulansayi < tahminisayi - 10:
+        print("\n dusuk bir sayi tahmin ettin!\n yuksek bir tahmin gir.")
+        deneme_sayisi += 1
+    elif tutulansayi > tahminisayi + 10:
+        print("\nyuksek bir sayi tahmin ettin\n dusuk bir tahmin gir")
+        deneme_sayisi += 1
+
+    elif tutulansayi > tahminisayi:
+        print("\nyaklastin ! \n biraz daha dusuk bir tahmin gir ")
+        deneme_sayisi += 1
+    elif tutulansayi < tahminisayi:
+        print("\nyaklastin ! \n biraz daha yuksek bir tahmin gir")
+        deneme_sayisi += 1
+    else:
+        print("\ndogru tahmin! {}.denemede buldun tebrikler!".format(deneme_sayisi))
+        deneme_sayisi += 1
+        print(çıkış)
+        break
