@@ -1,0 +1,20 @@
+with open("futbolcular(1).txt","a+",encoding="utf-8") as f:
+    veri=f.readlines() #dosya icindekileri satir satir liste seklinde veri degiskenine  yazdik
+for i in veri:  #veri deki bilgileri tek tek gostermek icin for dongusuyle yazdk
+        if "Fenerbahce" in i:
+            with open("fb.txt","a",encoding="utf-8") as file1:
+                file1.write(i)
+
+        elif "Galatasaray" in i:
+            with open("gs.txt","a",encoding="utf-8") as file2:
+                file2.write(i)
+
+        elif "Besiktas" in i:
+            with open("bjk.txt","a",encoding="utf-8") as file3:
+                file3.write(i)
+
+        else:
+            print("dosya bulunamadi.")
+
+f.close()
+print("dosyaniz ayiklandi")
