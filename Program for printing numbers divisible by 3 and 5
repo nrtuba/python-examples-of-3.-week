@@ -1,0 +1,17 @@
+print("Bu program ile 3 e tam bolunen sayilara FIZZ, 5 e tam bolunenlere BUZZ ve hem 3 e hemde 5 e tam bolunenlere FIZZBUZZ diye yazdirabilriz")
+for x in range (1,101):
+
+    kalan3=x%3
+    if kalan3==0:
+        print(x,"\tFIZZ")
+        print("-"*12)
+
+    kalan5=x%5
+    if kalan5==0:
+        print(x,"\tBUZZ")
+        print("-"*12)
+
+    if (kalan5==0) and (kalan3==0):
+        print("^"*12)
+        print(x,"FIZZBUZZ")
+        print("^"*12)
